@@ -763,13 +763,24 @@ body {
 
 .what-is-section {
     padding: 120px 0;
-    background: var(--bg-secondary);
+    background: linear-gradient(135deg, rgba(255, 107, 74, 0.3), rgba(255, 159, 106, 0.25));
+    position: relative;
+}
+
+.what-is-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(255, 107, 74, 0.4), transparent);
+    pointer-events: none;
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    position: relative;
+    z-index: 1;
 }
 
 .feature-card {
@@ -777,11 +788,9 @@ body {
     border: 1px solid var(--border-color);
     border-radius: var(--radius);
     padding: 40px;
-    transition: var(--transition);
-}
-
-.feature-card {
     transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .feature-card:hover {
@@ -1193,7 +1202,16 @@ body {
 
 .objection-section {
     padding: 100px 0;
-    background: var(--bg-primary);
+    background: linear-gradient(135deg, rgba(255, 107, 74, 0.3), rgba(255, 159, 106, 0.25));
+    position: relative;
+}
+
+.objection-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(255, 107, 74, 0.4), transparent);
+    pointer-events: none;
 }
 
 .objection-card {
@@ -1201,9 +1219,12 @@ body {
     margin: 0 auto;
     text-align: center;
     background: var(--bg-card);
-    border: 1px solid var(--border-color);
+    border: 2px solid rgba(255, 107, 74, 0.5);
     border-radius: var(--radius-lg);
     padding: 56px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 32px rgba(255, 107, 74, 0.2);
 }
 
 .objection-icon {
@@ -1478,11 +1499,20 @@ body {
 .cta-section {
     padding: 120px 0;
     background: var(--bg-secondary);
+    position: relative;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(255, 107, 74, 0.1), transparent);
+    pointer-events: none;
 }
 
 .cta-card {
     background: var(--bg-card);
-    border: 1px solid var(--border-color);
+    border: 2px solid rgba(255, 107, 74, 0.3);
     border-radius: var(--radius-xl);
     padding: 72px 56px;
     text-align: center;
@@ -1490,6 +1520,7 @@ body {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 32px rgba(255, 107, 74, 0.15), 0 0 0 1px rgba(255, 107, 74, 0.1);
 }
 
 .cta-decoration {
@@ -1503,21 +1534,22 @@ body {
     position: absolute;
     border-radius: 50%;
     background: var(--accent-glow);
-    filter: blur(80px);
+    filter: blur(100px);
+    opacity: 0.8;
 }
 
 .cta-circle:first-child {
-    width: 300px;
-    height: 300px;
-    top: -150px;
-    right: -100px;
+    width: 400px;
+    height: 400px;
+    top: -200px;
+    right: -150px;
 }
 
 .cta-circle:last-child {
-    width: 250px;
-    height: 250px;
-    bottom: -100px;
-    left: -80px;
+    width: 350px;
+    height: 350px;
+    bottom: -150px;
+    left: -120px;
 }
 
 .cta-content {
@@ -1529,6 +1561,10 @@ body {
     margin-bottom: 12px;
     letter-spacing: -0.02em;
     font-weight: 800;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .cta-card > p,
@@ -1549,12 +1585,12 @@ body {
     width: 100%;
     padding: 18px 24px;
     background: var(--bg-tertiary);
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 107, 74, 0.2);
     border-radius: var(--radius-sm);
     color: var(--text-primary);
     font-size: 1rem;
     font-family: inherit;
-    transition: var(--transition);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-group input::placeholder {
@@ -1564,7 +1600,7 @@ body {
 .form-group input:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-glow);
+    box-shadow: 0 0 0 3px var(--accent-glow), 0 4px 12px rgba(255, 107, 74, 0.2);
 }
 
 .form-note {

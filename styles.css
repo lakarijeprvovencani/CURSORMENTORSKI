@@ -277,7 +277,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 180px 0 100px;
+    padding: 120px 0 100px;
     position: relative;
     overflow: hidden;
 }
@@ -326,6 +326,7 @@ body {
     border-radius: 100px;
     font-size: 0.9rem;
     color: var(--text-secondary);
+    margin-top: -40px;
     margin-bottom: 32px;
     font-weight: 500;
 }
@@ -1692,7 +1693,11 @@ body {
     }
     
     .hero {
-        padding: 160px 0 80px;
+        padding: 100px 0 80px;
+    }
+    
+    .hero-badge {
+        margin-top: -30px;
     }
     
     .hero-title {

@@ -2,6 +2,19 @@
 // VIBE CODING - Landing Page Scripts
 // ===============================================
 
+// Marquee infinite scroll
+function initMarquee() {
+    const marqueeTrack = document.querySelector('.marquee-track');
+    if (!marqueeTrack) return;
+
+    // Clone the content multiple times to ensure smooth infinite scroll
+    const content = marqueeTrack.innerHTML;
+    marqueeTrack.innerHTML = content + content + content + content;
+}
+
+// Initialize marquee on load
+document.addEventListener('DOMContentLoaded', initMarquee);
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -160,6 +173,24 @@ document.querySelectorAll('.feature-card, .path-card, .testimonial-card').forEac
     });
 });
 
+// FAQ Accordion functionality
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.closest('.faq-item');
+        const isActive = faqItem.classList.contains('active');
+
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Toggle current item
+        if (!isActive) {
+            faqItem.classList.add('active');
+        }
+    });
+});
+
 // Console easter egg
 console.log(`
 %c⚡ Vibe Coding
@@ -167,7 +198,7 @@ console.log(`
 
 Zainteresovan si za saradnju ili imaš pitanja?
 Kontaktiraj nas!
-`, 
+`,
 'font-size: 24px; font-weight: bold; color: #ff6b4a;',
 'font-size: 14px; color: #a0a0b0;'
 );

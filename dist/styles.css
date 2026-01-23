@@ -1572,6 +1572,19 @@ body::before {
     position: relative;
 }
 
+.mentor-image img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
 .mentor-image .image-placeholder {
     width: 160px;
     height: 160px;

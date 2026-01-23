@@ -1576,6 +1576,7 @@ body::before {
     width: 160px;
     height: 160px;
     object-fit: cover;
+    object-position: center 20%;
     border: 3px solid transparent;
     background-clip: padding-box;
     border-radius: 50%;

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Napravi svoj AI SaaS softver za 2 meseca bez ikakvog programiranja. Vibe Coding mentorski program.">
+    <title>Vibe Coding | Napravi Svoj Softver Bez Programiranja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-bar">
+        <div class="marquee">
+            <div class="marquee-track">
+                <span>🚀 Nova generacija polaznika kreće uskoro</span>
+                <span class="marquee-dot">•</span>
+                <span>💡 Nauči Vibe Coding bez predznanja</span>
+                <span class="marquee-dot">•</span>
+                <span>⚡ Ograničen broj mesta</span>
+                <span class="marquee-dot">•</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>Vibe Coding Mentorstvo</span>
+            </a>
+            <div class="nav-links">
+                <a href="#plan">O programu</a>
+                <a href="#plan">Plan</a>
+                <a href="#cena">Cena</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge animate-in">
+                <span class="badge-pulse"></span>
+                <span>Ovo je za tebe koji želiš da napraviš nešto svoje</span>
+            </div>
+            <h1 class="hero-title animate-in delay-1">
+                Ne moraš da budeš programer<br>
+                <span class="gradient-text">da bi imao svoj online biznis</span>
+            </h1>
+            <div class="hero-video animate-in delay-2">
+                <div class="video-placeholder">
+                    <div class="video-placeholder-content">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        <p>Video placeholder</p>
+                        <span>Ovde će biti video</span>
+                    </div>
+                </div>
+            </div>
+            <p class="hero-subtitle animate-in delay-3">
+                Ne moraš da znaš ni jednu jedinu liniju koda. Ako znaš da kucaš poruke na Viberu ili da naručiš picu preko aplikacije, možeš da napraviš softver koji će ljudi da ti plaćaju svakog meseca. Mi smo ga napravili, a nismo ni pipnuli programiranje. Naučićemo i tebe.
+            </p>
+            <div class="hero-cta animate-in delay-4">
+                <a href="#prijava" class="btn btn-primary btn-large">
+                    Hoću da napravim svoj softver
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">60</span>
+                    <span class="stat-label">Dana</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Linija koda</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Gotov softver</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Podrška</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Window -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-header">
+                <h2 class="demo-title">Zamisli da ovako praviš software</h2>
+                <p class="demo-subtitle">Za svaku funkcionalnost koju zamisliš</p>
+            </div>
+            <div class="demo-window">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="window-title">Cursor — Tvoja "pametna kucaća mašina"</span>
+                </div>
+                <div class="window-content">
+                    <div class="chat-conversation">
+                        <div class="chat-bubble user">
+                            <div class="chat-avatar">👤</div>
+                            <div class="chat-text">
+                                <span class="chat-label">Ti</span>
+                                <p>"E, napravi mi da ovde bude jedno dugme koje kad se klikne samo izbaci sliku i tekst za Instagram"</p>
+                            </div>
+                        </div>
+                        <div class="chat-bubble ai">
+                            <div class="chat-avatar">🤖</div>
+                            <div class="chat-text">
+                                <span class="chat-label">Cursor AI</span>
+                                <p>Razumem! Dodajem dugme sa funkcijom za generisanje Instagram posta. Evo koda koji to radi...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-file">InstagramGenerator.jsx</span>
+                            <span class="code-lang">React</span>
+                        </div>
+                        <pre class="code-content"><code><span class="code-keyword">export default function</span> <span class="code-function">InstagramGenerator</span>() {
+  <span class="code-keyword">const</span> [post, setPost] = useState(<span class="code-string">null</span>);
+  
+  <span class="code-keyword">const</span> generatePost = <span class="code-keyword">async</span> () => {
+    <span class="code-keyword">const</span> content = <span class="code-keyword">await</span> createInstagramContent();
+    setPost(content);
+  };
+  
+  <span class="code-keyword">return</span> (
+    <span class="code-tag">&lt;button</span> <span class="code-attr">onClick</span>={generatePost}<span class="code-tag">&gt;</span>
+      Generiši post 🚀
+    <span class="code-tag">&lt;/button&gt;</span>
+  );
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Is Section -->
+    <section class="what-is-section" id="sta-je">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Dobrodošao u eru</span>
+                <h2 class="section-title">
+                    <span class="gradient-text">"Vibe Coding-a"</span>
+                </h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card featured">
+                    <div class="feature-icon">💬</div>
+                    <h3>Šta je Vibe Coding?</h3>
+                    <p>Danas postoji alat koji se zove <strong>Cursor</strong>. To je kao „pametna kucaća mašina". Zaboravi na kucanje čudnih šifri i zagrada. Sada se koristi Vibe Coding — to je kad ti aplikaciju praviš tako što joj prenosiš "vibe" (ideju). Isto kao što kucaš poruku bratu na Viberu.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Ti si mozak (gazda)</h3>
+                    <p>Ti mu kažeš na srpskom šta želiš, a on to sastavi umesto tebe. Ti si mozak (gazda), on je radna snaga (majstor).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Mi znamo kako</h3>
+                    <p>Kvaka je u tome što niko ne zna kako da ga koristi pravilno. <strong>Mi znamo. I pokazaćemo ti.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paths Section -->
+    <section class="paths-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Biraj svoj put do zarade</span>
+                <h2 class="section-title">Kada naučiš ovaj zanat, pred tobom su dve ozbiljne opcije</h2>
+            </div>
+            
+            <div class="paths-grid">
+                <div class="path-card">
+                    <div class="path-number">01</div>
+                    <div class="path-icon-wrapper">
+                        <div class="path-icon">🚀</div>
+                    </div>
+                    <h3>Napravi svoj biznis (SaaS)</h3>
+                    <p>Napraviš aplikaciju koja rešava problem (npr. piše objave za restorane), postaviš mesečnu pretplatu i juriš 100 ljudi da ti plaćaju po 20-30 evra.</p>
+                    <div class="path-highlight">
+                        <span>💰</span>
+                        <span>To je tvoja nova plata dok ti spavaš</span>
+                    </div>
+                </div>
+                <div class="path-card">
+                    <div class="path-number">02</div>
+                    <div class="path-icon-wrapper">
+                        <div class="path-icon">💼</div>
+                    </div>
+                    <h3>Radi za klijente (Freelance)</h3>
+                    <p>Postoje hiljade vlasnika biznisa koji bi dali 1.000€ ili 2.000€ da im neko "sklopi" pametan AI alat za njihovu firmu. Ti im to završiš za par dana koristeći našu metodu i naplatiš ozbiljno.</p>
+                    <div class="path-highlight">
+                        <span>🎯</span>
+                        <span>Naplati ozbiljno za par dana rada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Mini Section 1 -->
+    <section class="cta-mini-section">
+        <div class="container">
+            <div class="cta-mini-card">
+                <h3>Spreman da kreneš?</h3>
+                <p>Pokreni svoj online biznis za 60 dana</p>
+                <a href="#prijava" class="btn btn-primary btn-large">
+                    Hoću da napravim svoj softver
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Section -->
+    <section class="plan-section" id="plan">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🛠 Šta ćemo tačno da uradimo</span>
+                <h2 class="section-title">60 dana do tvog softvera</h2>
+                <p class="section-desc">Nećemo učiti teoriju. <strong>Napravićemo ti posao.</strong> Zajedno pravimo aplikaciju koja sama piše objave za društvene mreže. Zamisli frizera ili vlasnika restorana koji nema vremena da piše šta će da objavi na Instagramu. Tvoja aplikacija će to da radi za njega, a on će tebi da plaća.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>1</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Nađemo kome ćemo da uzmemo pare</h3>
+                        <p>Odlučimo za koga praviš aplikaciju (restorani, teretane, advokati...).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>2</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Instaliramo alat</h3>
+                        <p>Postavimo sve na tvoj komp za 10 minuta.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>3</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Vibe Coding u akciji</h3>
+                        <p>Ti mu na srpskom objasniš šta želiš, on krene da "zida" tvoju aplikaciju. Ti samo gledaš kako se pojavljuje na ekranu.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>4</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Sredimo da izgleda profi</h3>
+                        <p>Da ne bude nabacano, nego da izgleda kao da je radio tim stručnjaka iz Amerike.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>5</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Povežemo "mozak"</h3>
+                        <p>Spojimo tvoju aplikaciju sa najpametnijom veštačkom inteligencijom na svetu da bi znala da piše pametne stvari.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>6</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Napravimo kasu</h3>
+                        <p>Ubacimo sistem da ljudi mogu da ukucaju karticu i plate ti. To je onaj najbolji deo.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>7</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Pokažemo je svetu</h3>
+                        <p>Napravimo tvoj sajt i reklamu da ljudi saznaju da uopšte postojiš.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span>8</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Prodaja</h3>
+                        <p>Pomažemo ti da dođeš do prvih korisnika.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="cena">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🔥 Naša ponuda</span>
+                <h2 class="section-title">Sve na tacni</h2>
+                <p class="section-desc">Ovo nije "kurs" gde dobiješ snimke i snađi se druže. <strong>Ovo je mentorstvo.</strong> Idemo polako, korak po korak.</p>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-badge">Mentorski Program</div>
+                <div class="pricing-header">
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">300</span>
+                        <span class="period">/mesečno</span>
+                    </div>
+                    <p class="price-note">To je manje nego što prosečan čovek potroši na gluposti, izlaske i cigare. Ovde ulažeš u alat koji će sutra da te hrani.</p>
+                </div>
+                
+                <div class="pricing-features">
+                    <div class="pricing-feature">
+                        <div class="feature-check">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Trajanje: 2 meseca</strong>
+                            <p>Dovoljno da sve skapiraš, a premalo da odustaneš</p>
+                        </div>
+                    </div>
+                    <div class="pricing-feature">
+                        <div class="feature-check">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Grupni pozivi</strong>
+                            <p>Jednom nedeljno se gledamo uživo. Pitaš sve što ti nije jasno, rešavamo probleme na licu mesta.</p>
+                        </div>
+                    </div>
+                    <div class="pricing-feature">
+                        <div class="feature-check">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Podrška</strong>
+                            <p>Nema glupih pitanja. Tu smo da ti pregledamo rad i kažemo "vidi, ovde si pogrešio, ispravi ovako".</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#prijava" class="btn btn-primary btn-large btn-full">
+                    Hoću da napravim svoj softver — Prijavi me
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objection Section -->
+    <section class="objection-section">
+        <div class="container">
+            <div class="objection-card">
+                <div class="objection-icon">❌</div>
+                <h2>"Ali ja stvarno nemam veze sa ovim..."</h2>
+                <p>Ni mi nismo imali. Nismo programeri. Radili smo obične poslove baš kao i ti. Ali smo skapirali da je AI "prečica" koja je izjednačila igru.</p>
+                <p>Sada jedan običan momak iz Beograda ili Novog Sada može da napravi istu stvar kao neki programer iz Silicijumske doline koji ima platu $10.000.</p>
+                <div class="objection-highlight">
+                    <span>Jedina razlika je što on zna koji alat da koristi, a ti još uvek ne znaš.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 1: Masterbot -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="case-study-content">
+                <div class="case-study-image">
+                    <div class="image-placeholder">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                        <p>Screenshot sa Stripe</p>
+                        <span>Masterbot case study</span>
+                    </div>
+                </div>
+                <div class="case-study-text">
+                    <span class="section-tag">Case Study #1</span>
+                    <h2 class="section-title">Masterbot - SaaS Biznis</h2>
+                    <p>Ovo je primer kako je jedan od naših polaznika napravio SaaS aplikaciju koja generiše objave za Instagram. Koristeći Vibe Coding metodu, za samo 2 meseca je napravio funkcionalan softver koji sada ima preko 50 aktivnih korisnika.</p>
+                    <p>Stripe dashboard pokazuje konstantan rast prihoda mesec za mesec. Aplikacija je napravljena bez ijedne linije koda koju je polaznik sam napisao - sve je urađeno kroz Cursor AI asistenta.</p>
+                    <div class="case-study-stats">
+                        <div class="case-stat">
+                            <span class="case-stat-number">50+</span>
+                            <span class="case-stat-label">Aktivnih korisnika</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="case-stat-number">2</span>
+                            <span class="case-stat-label">Meseca do lansiranja</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="case-stat-number">0</span>
+                            <span class="case-stat-label">Linija koda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 2: Freelance -->
+    <section class="case-study-section case-study-reverse">
+        <div class="container">
+            <div class="case-study-content">
+                <div class="case-study-video">
+                    <div class="video-placeholder-vertical">
+                        <div class="video-placeholder-content">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <p>Video placeholder</p>
+                            <span>9:16 format</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-study-text">
+                    <span class="section-tag">Case Study #2</span>
+                    <h2 class="section-title">Freelance projekat - Istoka Pavlović</h2>
+                    <p>Ovaj projekat pokazuje kako se koristi Vibe Coding za freelance poslove. Klijent je tražio AI alat koji će automatski generisati sadržaj za njihovu agenciju.</p>
+                    <p>Za samo 5 dana rada, napravili smo kompletan sistem koji integriše sa različitim platformama i automatski kreira kvalitetan sadržaj. Klijent je bio oduševljen brzinom i kvalitetom rešenja.</p>
+                    <div class="case-study-highlight">
+                        <span>💰</span>
+                        <div>
+                            <strong>Naplaćeno: €2.000</strong>
+                            <p>Za 5 dana rada koristeći Vibe Coding metodu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentors Section -->
+    <section class="mentors-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">👨‍🏫 Ko su tvoji mentori</span>
+                <h2 class="section-title">Ljudi koji će te voditi do cilja</h2>
+                <p class="section-desc">Mi nismo teoretičari. Mi smo ovo prošli, živeli, i sada prenosimo dalje.</p>
+            </div>
+
+            <div class="mentors-grid">
+                <div class="mentor-card">
+                    <div class="mentor-image">
+                        <div class="image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="mentor-info">
+                        <h3>Ime Prezime</h3>
+                        <p class="mentor-role">Vibe Coding Mentor</p>
+                        <p class="mentor-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Već 3 godine pravim SaaS aplikacije koristeći AI alate. Napravio sam 5+ uspešnih projekata i pomogao desetinama ljudi da pokrenu svoje biznise.</p>
+                    </div>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-image">
+                        <div class="image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="mentor-info">
+                        <h3>Ime Prezime</h3>
+                        <p class="mentor-role">Vibe Coding Mentor</p>
+                        <p class="mentor-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Freelancer koji je napravio 20+ projekata za klijente koristeći Vibe Coding metodologiju. Specijalizovan za brzo lansiranje MVP proizvoda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Mini Section 2 -->
+    <section class="cta-mini-section">
+        <div class="container">
+            <div class="cta-mini-card">
+                <h3>Naši mentori su spremni da te vode</h3>
+                <p>Prijavi se i počni za 60 dana</p>
+                <a href="#prijava" class="btn btn-primary btn-large">
+                    Hoću da napravim svoj softver
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Screenshots -->
+    <section class="testimonials-screenshots-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Šta kažu polaznici</span>
+                <h2 class="section-title">Utisci naših studenata</h2>
+                <p class="section-desc">Preko 20 screenshot-a sa različitih platformi gde naši polaznici dele svoja iskustva.</p>
+            </div>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="prijava">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-decoration">
+                    <div class="cta-circle"></div>
+                    <div class="cta-circle"></div>
+                </div>
+                <div class="cta-content">
+                    <h2>Spreman da napraviš svoj softver?</h2>
+                    <p>Za 2 meseca možeš imati aplikaciju koja ti zarađuje dok spavaš.</p>
+                    
+                    <form class="signup-form" id="signup-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Tvoje ime" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Tvoj email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            Hoću da napravim svoj softver — Prijavi me
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <p class="form-note">⚡ Broj mesta je ograničen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PS Section -->
+    <section class="ps-section">
+        <div class="container">
+            <div class="ps-content">
+                <p><strong>P.S.</strong> Svet se menja brzo. Za godinu dana, svi će znati za ovo i biće mnogo teže. Sada je onaj trenutak kada se pravi razlika. Možeš da nastaviš da skroluješ, ili možeš da za 2 meseca imaš svoj softver koji ti donosi pare. Tvoja odluka.</p>
+                <p><strong>P.P.S.</strong> Ako se plašiš da ćeš se zaglaviti — zato smo mi tu. Nećemo te ostaviti dok tvoja aplikacija ne proradi. To nam je posao.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">❓ Često postavljana pitanja</span>
+                <h2 class="section-title">Sve što trebaš da znaš</h2>
+                <p class="section-desc">Odgovori na najčešća pitanja o Vibe Coding mentorstvu</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Da li mi stvarno ne treba nijedno predznanje?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ne treba ti apsolutno nikakvo predznanje. Ako znaš da koristiš telefon i kompjuter, to je dovoljno. Naučićemo te sve od nule. Mnogi naši polaznici pre ovoga nisu ni znali šta je kod, a sada imaju svoje aplikacije koje zarađuju.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Koliko vremena dnevno mi treba?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Preporučujemo 1-2 sata dnevno, ali možeš i manje. Program je fleksibilan i prilagođava se tvom tempu. Nije bitno da li radiš ujutru ili uveče - važno je samo da budeš konstantan. Neki polaznici rade i vikendima i završe brže.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Šta ako zapnem ili ne razumem nešto?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tu smo da te odvučemo iz bilo kog problema. Imaš pristup grupi gde možeš da pitaš šta god te muči, plus imamo nedeljne pozive gde rešavamo probleme uživo. Nećeš ostati sam - garantujemo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Da li mogu da platim na rate?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Da! Možeš platiti mesečno - $300 za prvi mesec, pa još $300 za drugi mesec. Bez ikakvih skrivenih troškova ili dodatnih naknada. Jednostavno i transparentno.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Koji softver/alati su mi potrebni?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Potreban ti je samo kompjuter (Windows, Mac ili Linux) i internet konekcija. Sve alate koje koristimo su besplatni ili imaju besplatnu verziju koja je sasvim dovoljna. Pokazaćemo ti tačno šta i kako da instaliraš.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Šta ako ne završim za 60 dana?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nema problema! Dobićeš pristup svim materijalima i i dalje možeš da nas kontaktiraš. Radimo sa tobom dok ne završiš projekat. 60 dana je prosek, ali ako ti treba više vremena, tu smo za tebe.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Da li ću zaista moći da zaradim od ovoga?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Da, ako završiš program i napraviš aplikaciju. Pokazujemo ti konkretne primere naših polaznika koji već zarađuju. Ali moraš da završiš projekat i da nađeš korisnike - mi te učimo kako, ali ti moraš da sprovedeš u delo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Da li dobijem sertifikat nakon završetka?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Dobićeš nešto mnogo bolje - funkcionalan softver koji radi i koji možeš pokazati. U ovom svetu, ono što si napravio vredi više od bilo kog sertifikata. Portfolio projekat je tvoj sertifikat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span>Vibe Coding Mentorstvo</span>
+                    </a>
+                    <p>Mentorski program za pravljenje softvera bez programiranja.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="terms.html">Uslovi korišćenja</a>
+                    <a href="privacy.html">Privatnost</a>
+                    <a href="cookies.html">Kolačići</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Vibe Coding Mentorstvo™ Sva prava zadržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+// Create favicon using canvas
+const canvas = document.createElement('canvas');
+canvas.width = 32;
+canvas.height = 32;
+const ctx = canvas.getContext('2d');
+
+// Gradient background
+const gradient = ctx.createLinearGradient(0, 0, 32, 32);
+gradient.addColorStop(0, '#ff6b4a');
+gradient.addColorStop(1, '#ff8e6b');
+ctx.fillStyle = gradient;
+ctx.fillRect(0, 0, 32, 32);
+
+// Draw VC text
+ctx.fillStyle = 'white';
+ctx.font = 'bold 20px Arial';
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.fillText('VC', 16, 16);
+
+// Convert to data URL and download
+const dataURL = canvas.toDataURL('image/png');
+const link = document.createElement('a');
+link.download = 'favicon-32x32.png';
+link.href = dataURL;
+link.click();
+</script>
+</head>
+<body>Creating favicon...</body>
+</html>

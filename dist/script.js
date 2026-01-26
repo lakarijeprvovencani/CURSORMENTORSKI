@@ -52,16 +52,19 @@ mobileMenuBtn?.addEventListener('click', () => {
     navLinks.classList.toggle('mobile-open');
 });
 
-// Form submission with animation
+// Form submission with Netlify Forms
 const signupForm = document.getElementById('signup-form');
 
-signupForm?.addEventListener('submit', function(e) {
+signupForm?.addEventListener('submit', async function(e) {
     e.preventDefault();
-    const name = this.querySelector('input[name="name"]').value;
-    const email = this.querySelector('input[name="email"]').value;
+    
+    const formData = new FormData(this);
+    const name = formData.get('name');
+    const email = formData.get('email');
     
     // Animate button
     const button = this.querySelector('button[type="submit"]');
+    const originalButtonHTML = button.innerHTML;
     button.innerHTML = `
         <svg class="spinner" width="24" height="24" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="60" stroke-dashoffset="20">
@@ -72,16 +75,29 @@ signupForm?.addEventListener('submit', function(e) {
     `;
     button.disabled = true;
     
-    // Simulate submission delay
-    setTimeout(() => {
-        this.innerHTML = `
-            <div class="form-success">
-                <div class="success-icon">🎉</div>
-                <h3>Hvala ti, ${name}!</h3>
-                <p>Javićemo ti se uskoro na <strong>${email}</strong></p>
-            </div>
-        `;
-    }, 1500);
+    try {
+        // Submit to Netlify Forms
+        const response = await fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+        });
+        
+        if (response.ok) {
+            // Redirect to thank you page
+            window.location.href = '/thank-you.html';
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        // If fetch fails, try native form submission
+        console.error('Error submitting form:', error);
+        button.innerHTML = originalButtonHTML;
+        button.disabled = false;
+        
+        // Fallback: allow native form submission
+        this.submit();
+    }
 });
 
 // Add visible class styles
@@ -188,6 +204,154 @@ document.querySelectorAll('.faq-question').forEach(button => {
         if (!isActive) {
             faqItem.classList.add('active');
         }
+    });
+});
+
+// Hero Video Player with iframe
+document.addEventListener('DOMContentLoaded', function() {
+    const heroVideo = document.getElementById('hero-video');
+    const videoOverlay = document.getElementById('video-overlay');
+    const playButton = document.getElementById('play-button');
+
+    console.log('Video elements:', {heroVideo, videoOverlay, playButton});
+
+    if (videoOverlay) {
+        // Click on overlay to play
+        videoOverlay.addEventListener('click', function(e) {
+            console.log('Overlay clicked!');
+            videoOverlay.style.display = 'none';
+            console.log('Overlay hidden');
+        });
+    }
+
+    if (playButton) {
+        // Also add click on play button
+        playButton.addEventListener('click', function(e) {
+            console.log('Play button clicked!');
+            e.preventDefault();
+            e.stopPropagation();
+            if (videoOverlay) {
+                videoOverlay.style.display = 'none';
+            }
+        });
+    }
+});
+
+// Image Lightbox functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Create lightbox modal
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    `;
+    document.body.appendChild(lightbox);
+
+    // Add click event to all testimonial screenshots
+    const screenshots = document.querySelectorAll('.testimonial-screenshot');
+    screenshots.forEach(img => {
+        img.addEventListener('click', function() {
+            lightbox.style.display = 'flex';
+            document.getElementById('lightbox-img').src = this.src;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    // Close lightbox when clicking on close button or outside image
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox || e.target.className === 'lightbox-close') {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+
+// Mobile Testimonials Carousel Auto-scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const screenshotsGrid = document.querySelector('.screenshots-grid');
+
+    if (!screenshotsGrid) return;
+
+    let autoScrollInterval;
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    function autoScroll() {
+        if (!isMobile() || isUserScrolling) return;
+
+        const scrollAmount = screenshotsGrid.clientWidth * 0.85; // One card width
+        const maxScroll = screenshotsGrid.scrollWidth - screenshotsGrid.clientWidth;
+
+        if (screenshotsGrid.scrollLeft >= maxScroll - 10) {
+            // Reset to beginning
+            screenshotsGrid.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            // Scroll to next item
+            screenshotsGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    }
+
+    function startAutoScroll() {
+        if (isMobile()) {
+            autoScrollInterval = setInterval(autoScroll, 3000); // Auto-scroll every 3 seconds
+        }
+    }
+
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+    }
+
+    // Detect user scrolling
+    screenshotsGrid.addEventListener('scroll', function() {
+        isUserScrolling = true;
+        stopAutoScroll();
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            isUserScrolling = false;
+            startAutoScroll();
+        }, 5000); // Resume auto-scroll 5 seconds after user stops scrolling
+    });
+
+    // Start auto-scroll on mobile
+    if (isMobile()) {
+        startAutoScroll();
+    }
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        stopAutoScroll();
+        if (isMobile()) {
+            startAutoScroll();
+        }
+    });
+
+    // Pause auto-scroll when user touches the carousel
+    screenshotsGrid.addEventListener('touchstart', function() {
+        isUserScrolling = true;
+        stopAutoScroll();
+    });
+
+    screenshotsGrid.addEventListener('touchend', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            isUserScrolling = false;
+            startAutoScroll();
+        }, 5000);
     });
 });
 

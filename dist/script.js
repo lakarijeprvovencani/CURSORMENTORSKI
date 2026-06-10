@@ -15,6 +15,14 @@ function initMarquee() {
 // Initialize marquee on load
 document.addEventListener('DOMContentLoaded', initMarquee);
 
+// Lazy-load images for better performance
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+        if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+        if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+    });
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -52,20 +60,16 @@ mobileMenuBtn?.addEventListener('click', () => {
     navLinks.classList.toggle('mobile-open');
 });
 
-// Form submission with Netlify Forms
-const signupForm = document.getElementById('signup-form');
+// Form submission with Netlify Forms (mentorski program + besplatan trening)
+function wireNetlifyFormLoading(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
 
-signupForm?.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    
-    // Animate button
-    const button = this.querySelector('button[type="submit"]');
-    const originalButtonHTML = button.innerHTML;
-    button.innerHTML = `
+    form.addEventListener('submit', function() {
+        const button = this.querySelector('button[type="submit"]');
+        if (!button) return;
+
+        button.innerHTML = `
         <svg class="spinner" width="24" height="24" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="60" stroke-dashoffset="20">
                 <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
@@ -73,32 +77,12 @@ signupForm?.addEventListener('submit', async function(e) {
         </svg>
         Šaljem...
     `;
-    button.disabled = true;
-    
-    try {
-        // Submit to Netlify Forms
-        const response = await fetch('/', {
-            method: 'POST',
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString()
-        });
-        
-        if (response.ok) {
-            // Redirect to thank you page
-            window.location.href = '/thank-you.html';
-        } else {
-            throw new Error('Form submission failed');
-        }
-    } catch (error) {
-        // If fetch fails, try native form submission
-        console.error('Error submitting form:', error);
-        button.innerHTML = originalButtonHTML;
-        button.disabled = false;
-        
-        // Fallback: allow native form submission
-        this.submit();
-    }
-});
+        button.disabled = true;
+    });
+}
+
+wireNetlifyFormLoading('signup-form');
+wireNetlifyFormLoading('trening-signup-form');
 
 // Add visible class styles
 const style = document.createElement('style');
@@ -249,8 +233,8 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.body.appendChild(lightbox);
 
-    // Add click event to all testimonial screenshots
-    const screenshots = document.querySelectorAll('.testimonial-screenshot');
+    // Add click event to all testimonial screenshots (uključujući prvu grupu)
+    const screenshots = document.querySelectorAll('.testimonial-screenshot, .cohort-testimonial-shot');
     screenshots.forEach(img => {
         img.addEventListener('click', function() {
             lightbox.style.display = 'flex';

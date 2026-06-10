@@ -2,20 +2,24 @@
 <html lang="sr">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T79556ML');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Hvala na prijavi | Vibe Coding Mentorstvo</title>
     <meta name="description" content="Hvala što si se prijavio na Vibe Coding mentorski program. Kontaktiraćemo te uskoro.">
-    
+
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=14">
-    
+    <link rel="stylesheet" href="styles.css?v=16">
+
     <!-- Facebook Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -37,6 +41,11 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T79556ML"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="/" class="logo">
@@ -51,13 +60,58 @@
                 <div class="thank-you-icon">✅</div>
                 <h1>Hvala na prijavi!</h1>
                 <p>Uspešno si se prijavio na Vibe Coding mentorski program.</p>
-                <p>Kontaktiraćemo te uskoro sa svim detaljima o programu.</p>
-                <a href="/" class="btn btn-primary btn-large">
-                    Nazad na početnu
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
+
+                <div class="payment-section">
+                    <h2>Ako želiš da odmah osiguraš svoje mesto, odaberi jednu od 2 opcije plaćanja:</h2>
+
+                    <div class="payment-options">
+                        <a href="https://buy.stripe.com/6oUdR2cnmdnc68P6g79AA00" class="payment-option" target="_blank" rel="noopener noreferrer">
+                            <div class="payment-option-header">
+                                <span class="payment-badge">Opcija 1</span>
+                            </div>
+                            <div class="payment-price">
+                                <span class="payment-currency">$</span>
+                                <span class="payment-amount">297</span>
+                                <span class="payment-period">/mesečno</span>
+                            </div>
+                            <p class="payment-description">Mesečno plaćanje (2x po 297)</p>
+                            <div class="payment-cta">
+                                Plati sada
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="https://buy.stripe.com/aFa7sEcnm2Iy0Ov5c39AA03" class="payment-option payment-option-featured" target="_blank" rel="noopener noreferrer">
+                            <div class="payment-option-header">
+                                <span class="payment-badge payment-badge-featured">Opcija 2</span>
+                                <span class="payment-save">Uštedi $60</span>
+                            </div>
+                            <div class="payment-price">
+                                <span class="payment-currency">$</span>
+                                <span class="payment-amount">535</span>
+                            </div>
+                            <p class="payment-description">Uplati u celosti za oba meseca</p>
+                            <div class="payment-cta">
+                                Plati sada
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <p>Ako ti je potrebno još informacija o programu, zakaži besplatan poziv sa nama.</p>
+                    <a href="https://calendly.com/vajbkodiranje-info/15min" class="btn btn-ghost btn-large" id="thank-you-calendly-btn" target="_blank" rel="noopener noreferrer">
+                        Zakaži besplatan poziv
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -79,6 +133,28 @@
     </footer>
 
     <script src="script.js?v=6"></script>
+    <script>
+    (function(){
+        var btn = document.getElementById('thank-you-calendly-btn');
+        if (!btn) return;
+        var url = 'https://calendly.com/vajbkodiranje-info/15min';
+
+        // Na mobilnim uređajima: otvori u istom tabu (pouzdanije)
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            btn.removeAttribute('target');
+            btn.onclick = function(e) {
+                e.preventDefault();
+                try {
+                    window.location.assign(url);
+                } catch(err) {
+                    window.location.href = url;
+                }
+            };
+        }
+    })();
+    </script>
 </body>
 
 </html>
